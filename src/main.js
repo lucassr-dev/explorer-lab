@@ -74,7 +74,7 @@ const cardNumberMasked = IMask(cardNumber, cardNumberPattern)
 
 const addButton = document.querySelector("#add-card")
 addButton.addEventListener("click", () => {
-  alert("Cartão adicionado!")
+  alert("Obrigado pelas informações")
 })
 
 document.querySelector("form").addEventListener("submit", event => {
@@ -109,10 +109,10 @@ function updateCardNumber(number) {
 }
 
 expirationDateMasked.on("accept", () => {
-updateExpirationDate(expirationDateMasked.value)
+  updateExpirationDate(expirationDateMasked.value)
 })
 
-function updateExpirationDate(date){
+function updateExpirationDate(date) {
   const ccExpiration = document.querySelector(".cc-extra .value")
   ccExpiration.innerText = date.length === 0 ? "02/32" : date
 }
